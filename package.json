@@ -1,0 +1,8 @@
+{
+  "name": "cordova-plugin-mulitple-fcm-receivers",
+  "version": "1.0.0",
+  "description": "A cordova plugin that connects multiple fcm receivers.",
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "MIT"
+}

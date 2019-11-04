@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="cordova-plugin-multiple-fcm-receivers"
+        version="1.0.0">
+
+    <name>Multiple FCM Receiver</name>
+    <description>Multiple FCM data messages receiver</description>
+    <license>MIT</license>
+    <dependency id="cordova-plugin-firebasex" version="^6.1.0"></dependency>
+
+    <platform name="android">
+        <preference name="TITLE" default="title" />
+        <preference name="BODY" default="body" />
+        <source-file src="src/MultipleFCMReceivers.java" target-dir="src/cordova/plugin/multipleFCMReceivers" />
+        <source-file src="src/Receiver.java" target-dir="src/cordova/plugin/multipleFCMReceivers" />
+        <config-file target="AndroidManifest.xml" parent="application">
+          <service android:name="cordova.plugin.multipleFCMReceivers.Receiver">
+            <intent-filter>
+              <action android:name="com.google.firebase.MESSAGING_EVENT"/>
+            </intent-filter>
+          </service>
+        </config-file>
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="MultipleFCMReceivers" >
+                <param name="android-package" value="cordova.plugin.multipleFCMReceivers.MultipleFCMReceivers"/>
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+    </platform>
+</plugin>
