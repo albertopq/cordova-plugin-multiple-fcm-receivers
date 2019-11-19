@@ -7,11 +7,9 @@
     <name>Multiple FCM Receiver</name>
     <description>Multiple FCM data messages receiver</description>
     <license>MIT</license>
-    <dependency id="cordova-plugin-firebasex" version="^6.1.0"></dependency>
+    <dependency id="cordova-plugin-firebasex" version="^7.0.1"></dependency>
 
     <platform name="android">
-        <preference name="TITLE" default="title" />
-        <preference name="BODY" default="body" />
         <source-file src="src/MultipleFCMReceivers.java" target-dir="src/cordova/plugin/multipleFCMReceivers" />
         <source-file src="src/Receiver.java" target-dir="src/cordova/plugin/multipleFCMReceivers" />
         <config-file target="AndroidManifest.xml" parent="application">
