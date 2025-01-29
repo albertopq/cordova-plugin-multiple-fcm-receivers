@@ -1,6 +1,6 @@
 package cordova.plugin.multipleFCMReceivers;
 import com.google.firebase.messaging.FirebaseMessagingService;
-import org.apache.cordova.firebase.FirebasePluginMessagingService;
+import by.chemerisuk.cordova.firebase.FirebaseMessagingPluginService;
 import com.google.firebase.messaging.RemoteMessage;
 import io.intercom.android.sdk.push.IntercomPushClient;
 
@@ -11,7 +11,7 @@ import java.util.Map;
 public class Receiver extends FirebaseMessagingService {
 
     private final IntercomPushClient intercomPushClient = new IntercomPushClient();
-    private final FirebasePluginMessagingService firebaseClient = new FirebasePluginMessagingService();
+    private final FirebaseMessagingPluginService firebaseClient = new FirebaseMessagingPluginService();
     public Receiver() {
     }
 

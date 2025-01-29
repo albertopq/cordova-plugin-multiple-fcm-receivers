@@ -7,13 +7,13 @@
     <name>Multiple FCM Receiver</name>
     <description>Multiple FCM data messages receiver</description>
     <license>MIT</license>
-    <dependency id="cordova-plugin-firebasex"></dependency>
+    <dependency id="cordova-plugin-firebase-messaging"></dependency>
 
     <platform name="android">
         <source-file src="src/MultipleFCMReceivers.java" target-dir="src/cordova/plugin/multipleFCMReceivers" />
         <source-file src="src/Receiver.java" target-dir="src/cordova/plugin/multipleFCMReceivers" />
         <config-file target="AndroidManifest.xml" parent="application">
-          <service android:name="cordova.plugin.multipleFCMReceivers.Receiver">
+          <service android:name="cordova.plugin.multipleFCMReceivers.Receiver" android:exported="false">
             <intent-filter>
               <action android:name="com.google.firebase.MESSAGING_EVENT"/>
             </intent-filter>
