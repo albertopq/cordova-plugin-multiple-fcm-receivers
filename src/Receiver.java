@@ -16,6 +16,12 @@ public class Receiver extends FirebaseMessagingService {
     }
 
     @Override
+    public void onCreate) {
+        injectContext(firebaseClient);
+        firebaseClient.onCreate();
+    }
+
+    @Override
     public void onNewToken(String refreshedToken) {
         intercomPushClient.sendTokenToIntercom(getApplication(), refreshedToken);
     }
