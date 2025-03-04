@@ -16,7 +16,7 @@ public class Receiver extends FirebaseMessagingService {
     }
 
     @Override
-    public void onCreate) {
+    public void onCreate() {
         injectContext(firebaseClient);
         firebaseClient.onCreate();
     }
